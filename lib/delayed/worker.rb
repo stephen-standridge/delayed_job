@@ -320,8 +320,7 @@ module Delayed
 
     def reload!
       return unless self.class.reload_app?
-      ActionDispatch::Reloader.cleanup!
-      ActionDispatch::Reloader.prepare!
+      ActionDispatch::Reloader.reload!
     end
   end
 end
